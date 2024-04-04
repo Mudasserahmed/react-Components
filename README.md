@@ -1,4 +1,4 @@
-component no 1 :
+**component no 1** :
 A basic Input for texbox that accepts alphanumeric values (v0.5)
 #usage
 <BasicInput
