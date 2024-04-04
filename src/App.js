@@ -17,13 +17,6 @@ function App() {
         type={"text"}
         onChange={(e) => handleChange(e)}
       />
-      {base?.map((item, index) => (
-        <>
-          <p>{(item?.name)}</p>
-          <img src={`data:image/tiff;base64,${(item?.base64)}`} alt={item?.name}  />
-          {/* <iframe src={`data:image/tiff;base64,${(item?.base64)}`}/> */}
-        </>
-      ))}
     </div>
   );
 }
