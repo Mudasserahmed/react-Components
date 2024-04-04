@@ -1,8 +1,6 @@
 # component no 1 :
 A basic Input for texbox that accepts alphanumeric values (v0.5)
-
 # usage
-
 
 <BasicInput
         name="myInput"
@@ -14,9 +12,9 @@ A basic Input for texbox that accepts alphanumeric values (v0.5)
         maxLength={20}
         size={30}
       />
-
       
 # Props:
+
 **placeholder**: (String) Placeholder text displayed when the input is empty.  
 **minLength**: (Number) Minimum length of the input value.  
 **maxLength**: (Number) Maximum length of the input value.  
