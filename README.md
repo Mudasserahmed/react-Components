@@ -12,7 +12,8 @@ A basic Input for texbox that accepts alphanumeric values (v0.5)
         size={30}
       />
 # Props:
-**placeholder**: (String) Placeholder text displayed when the input is empty.
+**placeholder**: (String) Placeholder text displayed when the input is empty.  
+
 **minLength**: (Number) Minimum length of the input value.
 **maxLength**: (Number) Maximum length of the input value.
 **label**: (String) Title or label for the input field.
