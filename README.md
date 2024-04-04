@@ -2,7 +2,7 @@
 A basic Input for texbox that accepts alphanumeric values (v0.5)
 # usage
 
-<BasicInput
+`<BasicInput
         name="myInput"
         type="text"
         placeholder="Enter text here..."
@@ -11,7 +11,7 @@ A basic Input for texbox that accepts alphanumeric values (v0.5)
         minLength={3}
         maxLength={20}
         size={30}
-      />
+      />`
       
 # Props:
 
