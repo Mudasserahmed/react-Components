@@ -1,6 +1,6 @@
 # component no 1 :
 A basic Input for texbox that accepts alphanumeric values (v0.5)
-#usage
+# usage
 <BasicInput
         name="myInput"
         type="text"
