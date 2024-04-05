@@ -40,8 +40,8 @@ The Select Component is a reusable component that allows users to select an opti
 # Props:
 
 **value**: (required) The currently selected option.  
-**onChange**: (required) Function to handle the change event when a new option is selected.
-**options**: (required) An array of objects representing the options to be displayed in the dropdown.
+**onChange**: (required) Function to handle the change event when a new option is selected.  
+**options**: (required) An array of objects representing the options to be displayed in the dropdown.  
 **...props**: Additional props to be passed to the <select> element.
 
 
