@@ -28,7 +28,7 @@ A basic Input for texbox that accepts alphanumeric values (v0.5)
 
 
 # Select Component:
-The Select Component is a reusable component that allows users to select an option from a dropdown list.
+The Select Component is a reusable component that allows users to select an option from a dropdown list. (v0.5)
 
 # usage :
 
