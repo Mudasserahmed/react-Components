@@ -1,4 +1,4 @@
-# component no 1 :
+# Basic Input Component :
 A basic Input for texbox that accepts alphanumeric values (v0.5)
 # usage
 
@@ -24,5 +24,24 @@ A basic Input for texbox that accepts alphanumeric values (v0.5)
 **name**: (String) Name attribute for the input field.  
 **onChange**: (Function) Callback function triggered when the input value changes.  
 **size**: (Number) Width of the input field in characters.
+**...props**: Additional props to be passed to Input Component.
+
+
+# Select Component:
+The Select Component is a reusable component that allows users to select an option from a dropdown list.
+
+# usage :
+
+`<SelectComponent
+      value={selectedOption}
+      onChange={handleChange}
+      options={options}
+    />`
+# Props:
+
+**value**: (required) The currently selected option.  
+**onChange**: (required) Function to handle the change event when a new option is selected.
+**options**: (required) An array of objects representing the options to be displayed in the dropdown.
+**...props**: Additional props to be passed to the <select> element.
 
 
