@@ -23,7 +23,7 @@ A basic Input for texbox that accepts alphanumeric values (v0.5)
 **inputValue**: (String) Value of the input field.  
 **name**: (String) Name attribute for the input field.  
 **onChange**: (Function) Callback function triggered when the input value changes.  
-**size**: (Number) Width of the input field in characters.
+**size**: (Number) Width of the input field in characters.  
 **...props**: Additional props to be passed to Input Component.
 
 
