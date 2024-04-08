@@ -1,5 +1,7 @@
 # Basic Input Component :
+
 A basic Input for texbox that accepts alphanumeric values (v0.5)
+
 # usage
 
 `<BasicInput
@@ -12,7 +14,7 @@ A basic Input for texbox that accepts alphanumeric values (v0.5)
         maxLength={20}
         size={30}
       />`
-      
+
 # Props:
 
 **placeholder**: (String) Placeholder text displayed when the input is empty.  
@@ -26,8 +28,8 @@ A basic Input for texbox that accepts alphanumeric values (v0.5)
 **size**: (Number) Width of the input field in characters.
 **...props**: Additional props to be passed to Input Component.
 
-
 # Select Component:
+
 The Select Component is a reusable component that allows users to select an option from a dropdown list.
 
 # usage :
@@ -37,6 +39,7 @@ The Select Component is a reusable component that allows users to select an opti
       onChange={handleChange}
       options={options}
     />`
+
 # Props:
 
 **value**: (required) The currently selected option.  
@@ -44,4 +47,19 @@ The Select Component is a reusable component that allows users to select an opti
 **options**: (required) An array of objects representing the options to be displayed in the dropdown.
 **...props**: Additional props to be passed to the <select> element.
 
+# Select Component:
 
+This is a simple React component that generates a basic checkbox with a label.
+
+# usage
+
+` <BasicCheckbox
+      label="My Checkbox"
+      checked={checked}
+      onChange={handleChange}
+    />`
+
+#  Props:
+**checked**: (boolean, required): Indicates whether the checkbox is checked or not.
+**onChange**:  (function, required): A callback function that is called whenever the checkbox is clicked.
+**label**: (string, required): The label text for the checkbox.
