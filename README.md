@@ -47,7 +47,6 @@ The Select Component is a reusable component that allows users to select an opti
 **...props**: Additional props to be passed to the <select> element.
 
 # Basic CheckBox:
-
 This is a simple React component that generates a basic checkbox with a label and onchange value .(v0.5)
 
 # usage
