@@ -47,10 +47,9 @@ The Select Component is a reusable component that allows users to select an opti
 **...props**: Additional props to be passed to the <select> element.
 
 # Basic CheckBox:
-
 This is a simple React component that generates a basic checkbox with a label and onchange value .(v0.5)
 
-# usage
+# usage :
 
 ` <BasicCheckbox
       label="My Checkbox"
@@ -58,7 +57,8 @@ This is a simple React component that generates a basic checkbox with a label an
       onChange={handleChange}
     />`
 
-#  Props:
+# Props:
+
 **checked**: (boolean, required): Indicates whether the checkbox is checked or not.
 **onChange**:  (function, required): A callback function that is called whenever the checkbox is clicked.
 **label**: (string, required): The label text for the checkbox.
