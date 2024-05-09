@@ -1,3 +1,4 @@
+import { colors } from "@mui/material";
 import React from "react";
 
 const BasicInput = ({
@@ -10,11 +11,13 @@ const BasicInput = ({
   name,
   onChange,
   size,
+  error,
+  ...props
 }) => {
   return (
     <React.Fragment>
       {/* Input component version no 0.5 */}
-      <label>Input Title</label>
+       <label> {label} </label><br />
       <input
         name={name}
         type={type}
@@ -23,9 +26,11 @@ const BasicInput = ({
         value={inputValue}
         size={size}  
         onChange={onChange}
-        miength={minLength}
+        minLength={minLength}
         maxLength={maxLength}
+        {...props}
       />
+       {error ? <p style={{color:"red"}}> {error} </p> : null}
     </React.Fragment>
   );
 };

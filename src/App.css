@@ -1,4 +1,44 @@
-body {
-  margin: 0;
-  padding: 0;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-input {
+  padding: 10px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.custom-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.custom-select select {
+  width: 100%;
+  background-color: #fff;
+}
+
+.custom-select label {
+  margin-bottom: 5px;
 }

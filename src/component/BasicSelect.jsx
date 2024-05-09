@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 
-function BasicSelect({ options,handleChange,selectedOption ,...props}) {
-
+function BasicSelect({ options,handleChange,selectedOption, label ,...props}) {
   return (
     <div>
-      <h2>Select Component Example</h2>
+      <label>{label}</label><br />
       <select value={selectedOption} onChange={handleChange} {...props}>
         <option value="" >Select an option</option>
         {/* options array  */}
