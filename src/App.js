@@ -76,7 +76,7 @@ const handleSelectChange  = (e)=>{
             size={30}
           />
           <BasicSelect name = "select1" handleChange={handleSelectChange}   options={users} className="custom-select" />
-          <BasicSelect selectedOption={formData?.select2} options={users} className="custom-select" />
+          <BasicSelect name = "select2" handleChange={handleSelectChange} options={users} className="custom-select" />
           <BasicInput
             name="inputValue2"
             error={errors.inputValue2}
