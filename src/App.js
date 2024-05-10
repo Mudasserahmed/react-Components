@@ -13,8 +13,9 @@ function App() {
     inputValue1: "",
     inputValue2: "",
     inputValue3: "",
-    select1:"",
-    select2:""
+    select1: "",
+    select2: "",
+    select3: ""
   });
 
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
     }
   }
 
+  //handle change for text input   
   const handleChange = (e) => {
     const { name, value } = e.target;
     const alphanumericRegex = /^[a-zA-Z0-9]*$/;
@@ -45,63 +47,65 @@ function App() {
       console.log("Invalid input. Only alphanumeric characters are allowed.");
     }
   }
-const handleSelectChange  = (e)=>{
-  console.log(e.target.value)
-  const {name,value} = e.target
-  setFormData((prev)=>({
-    ...prev,
-    [name]:value
-  }))
-}
-
+  //handle change for select input 
+  const handleSelectChange = (e) => {
+    console.log(e.target.value)
+    const { name, value } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value
+    }))
+  }
   const handleSubmit = () => {
     console.log("Form Data:", formData);
-    // You can perform further actions here, like sending the data to the server
   }
 
   return (
     <>
-      <div className="App">
-        <div className="grid-container">
-          <BasicInput
-            name="inputValue1"
-            error={errors.inputValue1}
-            type="text"
-            placeholder="Enter text here..."
-            value={formData.inputValue1}
-            onChange={handleChange}
-            minLength={3}
-            className="custom-input"
-            maxLength={20}
-            size={30}
-          />
-          <BasicSelect name = "select1" handleChange={handleSelectChange}   options={users} className="custom-select" />
-          <BasicSelect name = "select2" handleChange={handleSelectChange} options={users} className="custom-select" />
-          <BasicInput
-            name="inputValue2"
-            error={errors.inputValue2}
-            type="text"
-            placeholder="Enter text here..."
-            value={formData.inputValue2}
-            onChange={handleChange}
-            minLength={3}
-            className="custom-input"
-            maxLength={20}
-            size={30}
-          />
-          <BasicInput
-            name="inputValue3"
-            error={errors.inputValue3}
-            type="text"
-            placeholder="Enter text here..."
-            value={formData.inputValue3}
-            onChange={handleChange}
-            minLength={3}
-            className="custom-input"
-            maxLength={20}
-            size={30}
-          />
-          <button onClick={handleSubmit}>Submit</button>
+      <div>
+        <div className="App">
+          <div className="grid-container">
+            <BasicInput
+              name="inputValue1"
+              error={errors.inputValue1}
+              type="text"
+              placeholder="Enter text here..."
+              value={formData.inputValue1}
+              onChange={handleChange}
+              minLength={3}
+              className="custom-input"
+              maxLength={20}
+              size={30}
+            />
+            <BasicSelect name="select1" handleChange={handleSelectChange} options={users} className="custom-select" />
+            <BasicSelect name="select2" handleChange={handleSelectChange} options={users} className="custom-select" />
+            <BasicInput
+              name="inputValue2"
+              error={errors.inputValue2}
+              type="text"
+              placeholder="Enter text here..."
+              value={formData.inputValue2}
+              onChange={handleChange}
+              minLength={3}
+              className="custom-input"
+              maxLength={20}
+              size={30}
+            />
+            <BasicInput
+              name="inputValue3"
+              error={errors.inputValue3}
+              type="text"
+              placeholder="Enter text here..."
+              value={formData.inputValue3}
+              onChange={handleChange}
+              minLength={3}
+              className="custom-input"
+              maxLength={20}
+              size={30}
+            />
+            <BasicSelect name="select3" handleChange={handleSelectChange} options={users} className="custom-select" />
+            <button style={{ cursor: "pointer" }} onClick={handleSubmit}>Submit</button>
+          </div>
         </div>
       </div>
     </>
