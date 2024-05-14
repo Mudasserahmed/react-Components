@@ -9,6 +9,7 @@ import axios from "axios";
 function App() {
   const [users, setUsers] = useState([]);
   const [errors, setErrors] = useState({});
+  const [checked,setChecked] = useState(false)
   const [formData, setFormData] = useState({
     inputValue1: "",
     inputValue2: "",
@@ -59,7 +60,10 @@ function App() {
   const handleSubmit = () => {
     console.log("Form Data:", formData);
   }
-
+  const handleCheckChange = (e)=>{
+     console.log(e.target.checked)
+     setChecked(e.target.checked)
+  }
   return (
     <>
       <div>
@@ -103,6 +107,12 @@ function App() {
               maxLength={20}
               size={30}
             />
+            <BasicCheckbox
+              checked={checked}
+              label={"accept terms and condition"}
+              onChange={handleCheckChange}
+            />
+             
             <BasicSelect name="select3" handleChange={handleSelectChange} options={users} className="custom-select" />
             <button style={{ cursor: "pointer" }} onClick={handleSubmit}>Submit</button>
           </div>
