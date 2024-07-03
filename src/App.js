@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import BasicSelect from "./component/BasicSelect";
 import BasicCheckbox from "./component/BasicCheckbox";
 import axios from "axios";
+import BasicRadio from "./component/BasicRadio";
 function App() {
   const [users, setUsers] = useState([]);
   const [errors, setErrors] = useState({});
@@ -37,6 +38,7 @@ function App() {
 
   //handle change for text input   
   const handleChange = (e) => {
+    console.log(e.target.value)
     const { name, value } = e.target;
     const alphanumericRegex = /^[a-zA-Z0-9]*$/;
     if (alphanumericRegex.test(value)) {
@@ -69,6 +71,7 @@ function App() {
       <div>
         <div className="App">
           <div className="grid-container">
+            <BasicRadio handleChange={handleChange}/>
             <BasicInput
               name="inputValue1"
               error={errors.inputValue1}
