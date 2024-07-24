@@ -62,7 +62,6 @@ const Chat2 = () => {
             handleSendClick(); // Trigger the send message function
         }
     };
-
     useEffect(() => {
         if (selectedContact) {
             // Join the room for the selected contact

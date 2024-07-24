@@ -10,6 +10,8 @@ import BasicRadio from "./component/BasicRadio";
 import SnippingTool from "./component/SnippingTool";
 import Chat1 from "./component/Chat1";
 import Chat2 from "./component/Chat2";
+import { Gantt, Task, EventOption, StylingOption, ViewMode, DisplayOption } from 'gantt-task-react';
+import "gantt-task-react/dist/index.css";
 function App() {
   // const [users, setUsers] = useState([]);
   // const [errors, setErrors] = useState({});
@@ -69,13 +71,56 @@ function App() {
   //    console.log(e.target.checked)
   //    setChecked(e.target.checked)
   // }
+  let tasks = [
+    {
+      start: new Date(2020, 1, 1),
+      end: new Date(2020, 1, 3),
+      name: 'Idea',
+      id: 'Task 0',
+      type:'task',
+      progress: 95,
+      isDisabled: true,
+      styles: { progressColor: '#fffff', progressSelectedColor: '#ff9e0d' },
+    },
+    {
+      start: new Date(2020, 1, 1),
+      end: new Date(2020, 1, 5),
+      name: 'ui change',
+      id: 'Task 0',
+      type:'task',
+      progress: 45,
+      isDisabled: true,
+      styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d' },
+    },
+    {
+      start: new Date(2020, 1, 1),
+      end: new Date(2020, 1, 10),
+      name: 'api integration',
+      id: 'Task 0',
+      type:'task',
+      progress: 45,
+      isDisabled: true,
+      styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d' },
+    },
+];
+
 
   return (
     <>
-    {/* <h1> Hello world</h1> */}
-   {/* <SnippingTool/> */}
-{/* <Chat1/> */}
-<Chat2/>
+      {/* <h1> Hello world</h1> */}
+      {/* <SnippingTool/> */}
+      {/* <Chat1/> */}
+      {/* <Chat2/> */}
+      <Gantt 
+      tasks={tasks}
+      columns={[
+        { key: 'name', label: 'Task Name' },
+        { key: 'progress', label: 'Progress' },
+        // Remove 'from' and 'to' columns from the configuration
+        // Optionally, you might need to provide other required columns
+      ]}
+      />
+
       {/* <div>
         <div className="App">
           <div className="grid-container">
